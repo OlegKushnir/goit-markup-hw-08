@@ -16,7 +16,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="main-nav container">
         <nav class="menu">
           <a href="./index.html" class="logo"
@@ -58,7 +58,7 @@
           <h1 class="visually-hidden">Галерея</h1>
 
           <ul class="sort list">
-            <li class="sort__item"><button class="sort__button" type="button">Все</button></li>
+            <li class="sort__item"><button class="sort__button" type="button">Усі</button></li>
             <li class="sort__item"><button class="sort__button" type="button">Веб-сайти</button></li>
             <li class="sort__item"><button class="sort__button" type="button">Додатки</button></li>
             <li class="sort__item"><button class="sort__button" type="button">Дизайн</button></li>
@@ -66,15 +66,34 @@
           </ul>
 
           <ul class="galary list">
-            <li class="galary__item">
+            <li class="galary__item galary__item--bug">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio1.jpg    1x,
+                        ./images/portfolio1@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio1_t.jpg    1x,
+                        ./images/portfolio1_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio1_m.jpg    1x,
+                        ./images/portfolio1_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio1_m.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -84,7 +103,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="galary__card">
+                <div class="galary__card galary__card--bug">
                   <h2 class="galary__title">Технокряк</h2>
                   <p class="galary__product">Веб-сайт</p>
                 </div>
@@ -93,12 +112,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio2.jpg    1x,
+                        ./images/portfolio2@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio2_t.jpg    1x,
+                        ./images/portfolio2_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio2_m.jpg    1x,
+                        ./images/portfolio2_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio2_m.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -117,12 +155,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio3.jpg    1x,
+                        ./images/portfolio3@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio3_t.jpg    1x,
+                        ./images/portfolio3_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio3_m.jpg    1x,
+                        ./images/portfolio3_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio3_m.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -141,12 +198,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio4.jpg"
-                    alt="Проєкт Prime"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio4.jpg    1x,
+                        ./images/portfolio4@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio4_t.jpg    1x,
+                        ./images/portfolio4_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio4_m.jpg    1x,
+                        ./images/portfolio4_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio4_m.jpg"
+                      alt="Проєкт Prime"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -165,12 +241,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio5.jpg"
-                    alt="Проєкт Boxes"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio5.jpg    1x,
+                        ./images/portfolio5@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio5_t.jpg    1x,
+                        ./images/portfolio5_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio5_m.jpg    1x,
+                        ./images/portfolio5_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio5_m.jpg"
+                      alt="Проєкт Boxes"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -189,12 +284,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio6.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio6.jpg    1x,
+                        ./images/portfolio6@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio6_t.jpg    1x,
+                        ./images/portfolio6_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio6_m.jpg    1x,
+                        ./images/portfolio6_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio6_m.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -213,12 +327,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio7.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio7.jpg    1x,
+                        ./images/portfolio7@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio7_t.jpg    1x,
+                        ./images/portfolio7_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio7_m.jpg    1x,
+                        ./images/portfolio7_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio7_m.jpg"
+                      alt="Видання Limited Edition"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -237,12 +370,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio8.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio8.jpg    1x,
+                        ./images/portfolio8@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio8_t.jpg    1x,
+                        ./images/portfolio8_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio8_m.jpg    1x,
+                        ./images/portfolio8_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio8_m.jpg"
+                      alt="Проєкт LAB"
+                    />
+                  </picture>
                   <div class="galary__adbg">
                     <p class="galary__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -261,12 +413,31 @@
             <li class="galary__item">
               <a class="galary__link" href="">
                 <div class="galary__imgblock">
-                  <img
-                    class="galary__img"
-                    src="./images/portfolio9.jpg"
-                    alt="Growing Business"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./images/portfolio9.jpg    1x,
+                        ./images/portfolio9@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./images/portfolio9_t.jpg    1x,
+                        ./images/portfolio9_t@2x.jpg 2x
+                      "
+                    />
+    
+                    <img
+                      srcset="
+                        ./images/portfolio9_m.jpg    1x,
+                        ./images/portfolio9_m@2x.jpg 2x
+                      "
+                      src="./images/portfolio9_m.jpg"
+                      alt="Growing Business"
+                    />
+                  </picture>
 
                   <div class="galary__adbg">
                     <p class="galary__text">
@@ -289,6 +460,7 @@
     </main>
     <footer class="footer">
       <div class="container container--flex">
+        <div class="container__tablet--flex">
         <address>
           <a href="./index.html" class="logo footer__logo"
             >Web<span class="logo__studio--light">Studio</span></a
@@ -303,12 +475,12 @@
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="bottom-contacts__item">
               <a href="mailto:info@devstudio.com" class="bottom-contacts__link"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="bottom-contacts__item">
               <a href="tel:+380961111111" class="bottom-contacts__link"
                 >+38 096 111 11 11</a
               >
@@ -349,6 +521,7 @@
             </li>
           </ul>
         </div>
+      </div>
         <div class="subscribe">
           <h2 class="footer__title">Підпишіться на розсилку</h2>
           <form class="subscribe__form">

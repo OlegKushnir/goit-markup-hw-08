@@ -1,14 +1,22 @@
 .sort {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
   margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
 }
 .sort__item {
-  margin-right: 8px;
+  display: inline-flex;
 }
 
 .sort__button {
-  padding: 6px 22px;
+  min-width: 74px;
+  padding: 6px 24px;
   border: none;
   border-radius: 4px;
 
@@ -18,6 +26,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   cursor: pointer;
   outline: none;
   transition: color 250ms $cub-bez, background-color 250ms $cub-bez,
@@ -32,28 +41,28 @@
 }
 
 .galary {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .galary__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
+  width: 100%;
   transition: box-shadow 250ms $cub-bez;
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
-}
 
-.galary__item:hover .galary__adbg {
-  transform: translateY(0);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 2) / 3);
+  }
+  &:hover .galary__adbg {
+    transform: translateY(0);
+  }
 }
 
 .galary__link {
@@ -67,7 +76,7 @@
 }
 
 .galary__img {
-  display: block;
+  width: 100%;
 }
 
 .galary__adbg {
@@ -80,7 +89,7 @@
   width: 100%;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms $cub-bez;
 }
 
@@ -98,6 +107,13 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  @media screen and (min-width: 768px) {
+    @media screen and (max-width: 1199px) {
+      &--bug {
+        height: 143px;
+      }
+    }
+  }
 }
 
 .galary__title {

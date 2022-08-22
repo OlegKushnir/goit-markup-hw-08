@@ -1,35 +1,45 @@
 .descr {
-    padding-bottom: 0;
+  padding-bottom: 0;
+}
+.descr__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.descr__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: $sort-bgr-btn;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.descr__item {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
   }
-  .descr__list {
-    display: flex;
-  }
-  .descr__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    background-color: $sort-bgr-btn;
-    margin-bottom: 30px;
-    border-radius: 4px;
-  }
-  .descr__item {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
     width: calc((100% - 90px) / 4);
-    &:last-child {
-        margin-right: 0;
-      }
   }
-  
-  .descr__title {
-    margin-bottom: 10px;
-  
-    font-weight: 700;
-    font-size: 14px;
-    color: $title-text-color;
-    line-height: 1.14;
+}
+
+.descr__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: $title-text-color;
+  line-height: 1.14;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
-  .descr__text {
-    font-size: 14px;
-    line-height: 1.71;
-  }
+}
+.descr__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

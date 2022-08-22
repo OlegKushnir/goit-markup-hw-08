@@ -2,12 +2,29 @@
   background-color: $dark-bgr;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.bottom-contacts {
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .bottom-contacts__item {
-  margin-bottom: 9px;
-  &:last-child {
-    margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
   }
 }
 
@@ -29,8 +46,17 @@
 }
 
 .footer-soc {
-  margin-left: 95px;
-  padding-top: 12px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-bottom: 0;
+    padding-top: 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 95px;
+    margin-bottom: 0;
+    padding-top: 12px;
+  }
 }
 
 .footer__title {
@@ -48,16 +74,21 @@
 }
 
 .subscribe {
-  margin-left: auto;
-  padding-top: 12px;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    padding-top: 12px;
+  }
 }
 .subscribe__form {
-  display: flex;
   margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: center;
+  }
 }
 
 .subscribe__input {
-  width: 358px;
+  width: 100%;
   padding: 15px 16px;
   font-weight: 400;
   font-size: 16px;
@@ -67,13 +98,30 @@
   background-color: $dark-bgr;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .subscribe__btn {
-  display: flex;
-  margin-left: 12px;
+  margin-top: 20px;
+  display: inline-flex;
   width: 200px;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+    margin-top: 0;
+    margin-left: 12px;
+    margin-right: 0;
+  }
 }
 
 .subscribe__icon {
