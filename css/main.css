@@ -200,6 +200,24 @@ img {
 .social__link:hover, .social__link:focus, .social__link:active {
   background-color: #2196f3;
   fill: #ffffff;
+  -webkit-animation: rotateSocial 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 3s;
+          animation: rotateSocial 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 3s;
+}
+@-webkit-keyframes rotateSocial {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+@keyframes rotateSocial {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
 }
 .social__link--bottom {
   background-color: rgba(255, 255, 255, 0.1);
@@ -483,6 +501,39 @@ img {
 @media screen and (min-width: 1200px) {
   .descr__item {
     width: calc((100% - 90px) / 4);
+  }
+}
+
+.descr__item svg:hover {
+  -webkit-animation: rotateIcon 3s cubic-bezier(0.4, 0, 0.2, 1) forwards alternate;
+          animation: rotateIcon 3s cubic-bezier(0.4, 0, 0.2, 1) forwards alternate;
+}
+@-webkit-keyframes rotateIcon {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  33% {
+    transform: perspective(400px) rotateY(-30deg);
+  }
+  66% {
+    transform: perspective(400px) rotateY(30deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+@keyframes rotateIcon {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  33% {
+    transform: perspective(400px) rotateY(-30deg);
+  }
+  66% {
+    transform: perspective(400px) rotateY(30deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
   }
 }
 
@@ -772,8 +823,8 @@ img {
   min-height: calc(100% - 188px);
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  -webkit-animation: changeBgColor 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-          animation: changeBgColor 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  -webkit-animation: changeBgColor 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          animation: changeBgColor 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 1;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -782,10 +833,11 @@ img {
 @-webkit-keyframes changeBgColor {
   0% {
     background-color: #2196f3;
-    transform: translate(0) scale(0.5);
+    transform: translate(100%) scale(0.1);
   }
-  50% {
-    background-color: orange;
+  33% {
+    transform: translate(0) scale(0.3);
+    background-color: #fff;
   }
   100% {
     background-color: #fff;
@@ -795,10 +847,11 @@ img {
 @keyframes changeBgColor {
   0% {
     background-color: #2196f3;
-    transform: translate(0) scale(0.5);
+    transform: translate(100%) scale(0.1);
   }
-  50% {
-    background-color: orange;
+  33% {
+    transform: translate(0) scale(0.3);
+    background-color: #fff;
   }
   100% {
     background-color: #fff;

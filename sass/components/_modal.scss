@@ -25,16 +25,17 @@
     width: calc(100% - 15px * 2);
     min-height: calc(100% - 94px * 2);
     animation-play-state: running;
-    animation: changeBgColor 4s $cub-bez forwards   ;
+    animation: changeBgColor 2s $cub-bez forwards   ;
     
     @keyframes changeBgColor {
       0% {
         background-color: $accent-color ;
-        transform: translate(0) scale(0.5);
+        transform: translate(100%) scale(0.1);
       }
     
-      50% {
-        background-color: orange;
+      33% {
+        transform: translate(0) scale(0.3);
+        background-color: #fff;
       }
     
       100% {
