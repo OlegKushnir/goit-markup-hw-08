@@ -154,7 +154,10 @@ img {
   background-color: #2196f3;
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover, .btn:focus {
+  box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.54);
 }
 @media screen and (min-width: 1200px) {
   .btn {
@@ -585,11 +588,12 @@ img {
   border-radius: 4px;
   fill: #afb1b8;
   outline: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients__thumb:hover, .clients__thumb:focus, .clients__thumb:active {
   fill: #2196f3;
   border-color: #2196f3;
+  transform: scale(1.1);
 }
 
 .footer {
@@ -766,12 +770,40 @@ img {
   max-width: 450px;
   width: calc(100% - 30px);
   min-height: calc(100% - 188px);
-  background-color: #fff;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation: changeBgColor 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          animation: changeBgColor 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 1;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  transform: translate(-50%, -50%) scale(1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+@-webkit-keyframes changeBgColor {
+  0% {
+    background-color: #2196f3;
+    transform: translate(0) scale(0.5);
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes changeBgColor {
+  0% {
+    background-color: #2196f3;
+    transform: translate(0) scale(0.5);
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -784,6 +816,8 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .close-btn {

@@ -30,12 +30,15 @@
   fill: $soc-primary-color;
   outline: none;
 
-  transition: fill 250ms $cub-bez, border-color 250ms $cub-bez;
+  transition: fill 250ms $cub-bez, border-color 250ms $cub-bez,
+  transform 1250ms $cub-bez, border-color 250ms $cub-bez;
+
 
   &:hover,
   &:focus,
   &:active {
     fill: $accent-color;
     border-color: $accent-color;
+    transform: scale(1.1);
   }
 }
