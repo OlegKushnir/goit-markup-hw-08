@@ -17,12 +17,13 @@
   color: $title-white-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms $cub-bez,
-  box-shadow 250ms $cub-bez;
+  box-shadow 250ms $cub-bez, transform 50ms $cub-bez;
 
-  &:hover,
-  &:focus {
-    
+  &:hover {
    box-shadow: 0px 10px 9px 0px rgba(0,0,0,0.54);
+  }
+  &:active {
+    transform: translateY(2px);
   }
 
   @media screen and (min-width: 1200px) {

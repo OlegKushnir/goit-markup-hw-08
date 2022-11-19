@@ -111,6 +111,24 @@
   display: inline-flex;
   width: 200px;
   align-items: center;
+  overflow: hidden;
+  &:focus .subscribe__icon{
+    animation-play-state: running;
+    animation:  500ms $cub-bez backwards flyAway;
+    @keyframes flyAway {
+      0% {
+        transform: translate(0);
+      }
+    
+      80% {
+        transform: translate(-5px, 5px);
+      }
+    
+      100% {
+        transform: translate(35px, -35px) scale(50%);
+      }
+    }
+    }
   @media screen and (min-width: 768px) {
     display: block;
     margin-left: auto;
@@ -127,4 +145,5 @@
 .subscribe__icon {
   fill: currentColor;
   margin-left: 10px;
+  animation-play-state: paused;
 }

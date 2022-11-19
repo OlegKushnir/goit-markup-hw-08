@@ -24,26 +24,20 @@
     max-width: 450px;
     width: calc(100% - 15px * 2);
     min-height: calc(100% - 94px * 2);
+    background-color: #fff;
     animation-play-state: running;
-    animation: changeBgColor 2s $cub-bez forwards   ;
+    animation: changeBgColor 500ms $cub-bez forwards   ;
     
     @keyframes changeBgColor {
       0% {
-        background-color: $accent-color ;
-        transform: translate(100%) scale(0.1);
-      }
-    
-      33% {
-        transform: translate(0) scale(0.3);
-        background-color: #fff;
+        transform: translate(150%) scale(0);
       }
     
       100% {
-        background-color: #fff;
         transform: translate(-50%, -50%) scale(1);
       }
     }
-    // background-color: #fff;
+ 
    
    
     opacity: 1;
